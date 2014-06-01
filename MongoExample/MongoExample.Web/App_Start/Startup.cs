@@ -22,25 +22,7 @@ namespace MongoExample.Web.App_Start
 
             app.UseWebApi(config);
 
-			
-			if (ConfigurationManager.AppSettings["Environment"] == "TEST")
-			{
-				ConfigForTest();
-			}
-			else
-			{
-				ConfigForLive();
-			}
+			MongoConnection.Configure("mongodb://localhost", "owinMongo");
         }
-
-        public static void ConfigForLive()
-        {
-            MongoConnection.Configure("mongodb://localhost", "owinMongo");
-        }
-
-		public static void ConfigForTest()
-		{
-			MongoConnection.Configure("mongodb://localhost", "owinMongoTest");
-		}
     }
 }

@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using MongoExample.Web.Storage;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Dynamic;
 using System.Net.Http;
@@ -12,6 +13,7 @@ namespace MongoExample.Tests
 		[Fact]
 		public async void Adding_A_Product_Should_Return_The_Product()
 		{
+			MongoConnection.Configure("mongodb://localhost", "owinMongoTest");
 			TestHelpers.DestroyAllData();
 
 			dynamic formVars = new ExpandoObject();
@@ -27,6 +29,9 @@ namespace MongoExample.Tests
 		[Fact]
 		public async void Getting_All_Products_Should_Return_All_Products()
 		{
+			MongoConnection.Configure("mongodb://localhost", "owinMongoTest");
+			TestHelpers.DestroyAllData();
+
 			dynamic formVars = new ExpandoObject();
 			formVars.Name = "alpha";
 			await TestHelpers.TestServerInstance.Value.HttpClient.PostAsync("/products/add", TestHelpers.DynamicToFormData(formVars));
