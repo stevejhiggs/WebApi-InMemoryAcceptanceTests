@@ -1,16 +1,17 @@
 ﻿using MongoExample.Web.Storage;
 using Newtonsoft.Json;
+using NUnit.Framework;
 using System.Collections.Generic;
 using System.Dynamic;
 using System.Net.Http;
-using Xunit;
 
 namespace MongoExample.Tests
 {
+	[TestFixture]
 	public class ProductTests
 	{
-		[Trait("Category", "Mongo")]
-		[Fact]
+		[Category("Mongo")]
+		[Test]
 		public async void Adding_A_Product_Should_Return_The_Product()
 		{
 			MongoConnection.Configure("mongodb://localhost", "owinMongoTest");
@@ -22,11 +23,11 @@ namespace MongoExample.Tests
 			var response = await TestHelpers.TestServerInstance.Value.HttpClient.PostAsync("/products/add", TestHelpers.DynamicToFormData(formVars));
 			var result = await response.Content.ReadAsStringAsync();
 			dynamic addResult = JsonConvert.DeserializeObject<ExpandoObject>(result);
-			Assert.Equal(addResult.Name, "fish");
+			Assert.AreEqual(addResult.Name, "fish");
 		}
 
-		[Trait("Category", "Mongo")]
-		[Fact]
+		[Category("Mongo")]
+		[Test]
 		public async void Getting_All_Products_Should_Return_All_Products()
 		{
 			MongoConnection.Configure("mongodb://localhost", "owinMongoTest");
@@ -41,7 +42,7 @@ namespace MongoExample.Tests
 
 			var response = await TestHelpers.TestServerInstance.Value.HttpClient.GetAsync("/products/");
 			var result = await response.Content.ReadAsAsync<List<object>>();
-			Assert.Equal(result.Count, 2);
+			Assert.AreEqual(result.Count, 2);
 		}
 	}
 }

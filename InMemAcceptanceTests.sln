@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Echo.Tests", "Simple\Tests\Echo.Tests.csproj", "{F929F054-E825-438B-BB42-C98F5CB150B4}"
 EndProject
@@ -21,6 +21,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoExample.Web", "MongoExample\MongoExample.Web\MongoExample.Web.csproj", "{ECCC211A-2E00-43CC-B6EA-3E60C642AB8A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoExample.Tests", "MongoExample\MongoExample.Tests\MongoExample.Tests.csproj", "{C1480563-55B6-4B3D-A67F-4D203B2EE09D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RepositoryExample", "RepositoryExample", "{9F7BA7CF-F848-45D8-BE3D-8DCFC1671833}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository.Web", "RespositoryExample\Repository.Web\Repository.Web.csproj", "{9085C76D-5812-4266-998A-0FDD19631916}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository.Tests", "Repository.Tests\Repository.Tests.csproj", "{C68033B2-9705-4FC7-8F29-3095212965CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +50,14 @@ Global
 		{C1480563-55B6-4B3D-A67F-4D203B2EE09D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1480563-55B6-4B3D-A67F-4D203B2EE09D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1480563-55B6-4B3D-A67F-4D203B2EE09D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9085C76D-5812-4266-998A-0FDD19631916}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9085C76D-5812-4266-998A-0FDD19631916}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9085C76D-5812-4266-998A-0FDD19631916}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9085C76D-5812-4266-998A-0FDD19631916}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C68033B2-9705-4FC7-8F29-3095212965CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C68033B2-9705-4FC7-8F29-3095212965CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C68033B2-9705-4FC7-8F29-3095212965CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C68033B2-9705-4FC7-8F29-3095212965CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,5 +67,7 @@ Global
 		{D12CBE3A-39E8-46C6-B7F4-A4269CEE9B5E} = {12C2E9EC-3B68-492E-9DCE-4222CF0936B2}
 		{ECCC211A-2E00-43CC-B6EA-3E60C642AB8A} = {80BB5113-4FBD-401F-B037-4379583CDC1C}
 		{C1480563-55B6-4B3D-A67F-4D203B2EE09D} = {80BB5113-4FBD-401F-B037-4379583CDC1C}
+		{9085C76D-5812-4266-998A-0FDD19631916} = {9F7BA7CF-F848-45D8-BE3D-8DCFC1671833}
+		{C68033B2-9705-4FC7-8F29-3095212965CF} = {9F7BA7CF-F848-45D8-BE3D-8DCFC1671833}
 	EndGlobalSection
 EndGlobal
